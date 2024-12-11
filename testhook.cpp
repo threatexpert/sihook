@@ -1,8 +1,11 @@
-﻿#include <stdio.h>
+﻿////
+//// https://github.com/threatexpert/sihook
+////
+
+#include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ws2tcpip.h>
 #include <Windows.h>
 
 extern "C" {
@@ -46,5 +49,4 @@ int main()
     sihook_free(org_MessageBoxExA);
 
     MessageBoxExA(0, "test-free", "sihook", MB_ICONINFORMATION, 0);
-
 }
